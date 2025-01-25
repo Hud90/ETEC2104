@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Page</title>
+    <style>
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgray;
+        }
+
+        .pop-up {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            height: 50%;
+            background-color: white;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .input label {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .input input {
+            padding: 10px;
+            width: 95%;
+            border: 1px solid black;
+            font-size: 16px;
+        }
+
+        .button {
+            display: flex;
+            background-color: lightgreen;
+            border: 1px solid black;
+            padding: 10px;
+            width: 25%;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pop-up">
+        <div class="input">
+            <label>Email:</label>
+            <input placeholder="Enter your email">
+        </div>
+        <div class="input">
+            <label>Full name:</label>
+            <input placeholder="Enter your first and last name">
+        </div>
+        <div class="input">
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password">
+        </div>
+        <div class="input">
+            <label>Date of Birth:</label>
+            <input type="date" placeholder="Enter your DOB">
+        </div>
+        <div class="button">
+            <a href="index">Sign Up</a>
+        </div>
+    </div>
+    
+</body>
+</html>

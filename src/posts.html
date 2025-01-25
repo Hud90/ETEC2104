@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts Page</title>
+    <style>
+        
+    /* Container for the table */
+    .posts-container {
+        max-height: 80vh;
+        overflow-y: auto; /* Enables scrolling */
+        width: 100%;
+        padding-right: 3px;
+        border-right: 3px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    /* Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-bottom: 1px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+    }
+
+    /* Thumbnail */
+    .post-thumbnail {
+        width: 64px;
+        height: 64px;
+        background-color: lightcoral;
+        background-image: url("../html/logo.png");
+        background-size: contain; /* Make image cover area */
+        background-position: center;
+        margin-right: 10px;
+        border: 1px solid black;
+    }
+
+    /* Table Post Row style */
+    .post {
+        background-color: lightslategray;
+        border: 1px solid black;
+    }
+
+    /* Something about an nth child can be added to alternate post background colors here */
+
+    /* Not a label modifier */
+    .post-label {
+        background-color: antiquewhite;
+        width: 100%;
+        border: 2px solid black;
+        border-left: 3px solid black;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+        margin-right: 10px;
+        font-size: 64px;
+    }
+    </style>
+</head>
+<body>
+    <div class="post-label">
+        <label>Posts:</label>
+    </div>
+    <div class="posts-container">
+        <table>
+            <tbody>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>2 hours ago</p>
+                        <p>150 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 day ago</p>
+                        <p>320 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>3 days ago</p>
+                        <p>450 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 week ago</p>
+                        <p>120 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 week ago</p>
+                        <p>120 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 week ago</p>
+                        <p>120 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 week ago</p>
+                        <p>120 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 week ago</p>
+                        <p>120 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 week ago</p>
+                        <p>120 views</p>
+                    </td>
+                </tr>
+                <tr class="post">
+                    <td class="post-thumbnail"></td>
+                    <td>
+                        <p>1 week ago</p>
+                        <p>120 views</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
