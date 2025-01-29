@@ -29,7 +29,7 @@ cherrypy.quickstart(
     {
         "/html": {
             "tools.staticdir.on": True,
-            "tools.staticdir.dir": f"{srcdir}/../html"
+            "tools.staticdir.dir": os.path.abspath(f"{srcdir}/../html")
         }
     }
 )
