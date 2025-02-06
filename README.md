@@ -1,2 +1,2 @@
-Object Oriented Programming
-ETEC2104
+# Object Oriented Programming
+ETEC2104 Shawnee State University
