@@ -14,6 +14,7 @@ srcdir = os.path.dirname(__file__)
 
 cherrypy.config.update({'tools.sessions.on': True, 'tools.sessions.storage_type': 'ram'})
 
+# Global helper function
 def checkImage( data ):
         try:
             MAXSIZE=4096
@@ -58,7 +59,7 @@ class App:
         
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def make_post(self, name, pic): # Need to check why params, sessions, worked!!!!!!
+    def make_post(self, name, pic):
         # Get the name and picture from the form data
         name = cherrypy.request.params.get('name')
         pic = cherrypy.request.params.get('pic')  # This is where the file is stored
@@ -73,7 +74,7 @@ class App:
         # Read image data
         img_data = pic.file.read()
         
-        # Validate image (check if it's a valid image and within size limits)
+        # Validate image
         if not checkImage(img_data):
             return {"ok": False, "reason": "Invalid image"}
         
@@ -89,12 +90,18 @@ class App:
         recent_post = cherrypy.session.get('recent_post')
         
         if not recent_post:
-            cherrypy.response.status = 404
-            return "No recent post available."
-
+            # display question mark image
+            default_image_path = os.path.join(srcdir, '../html/question.png')
+        
+            # Open image and read into headers
+            if os.path.exists(default_image_path):
+                with open(default_image_path, 'rb') as img_file:
+                    cherrypy.response.headers["Content-Type"] = "image/jpeg"
+                    return img_file.read()
+                    
         # Get the raw binary image data
         image_data = recent_post['image_data']
-        cherrypy.response.headers["Content-Type"] = "image/jpeg"  # Adjust the content type for your image
+        cherrypy.response.headers["Content-Type"] = "image/jpeg"
         return image_data
 
 app = App()

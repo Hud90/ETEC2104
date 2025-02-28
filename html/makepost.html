@@ -15,14 +15,28 @@
     padding-left: 1em;
     padding-right: 1em;
 }
+.error {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    transform: translate(0px, 0px);
+}
+.error2 {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    transform: translate(0px, 25px);
+}
 </style></head>
 <body>
     <div>
         <span class='fieldname'>Post Name:</span>
         <input id="name" size="20">
+        <div id="name_error" class="error"></div>
     </div><div>
         <span class="fieldname">Post Picture:</span>
         <input id="pic" type="file" style="display:none" onchange="updatethumb()">
+        <div id="pic_error" class="error2"></div>
         <label for="pic" class="filepicker">Click to Pick</label>
         <img id="thumbnail" width="64" height="64:">
     </div>
