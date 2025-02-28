@@ -87,99 +87,19 @@
     <div class="posts-container">
         <table>
             <tbody>
+                % for i in range(len(image_list)): 
                 <tr class="post">
                     <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
+                        <div class="post-thumbnail" style="background-image: url(${image_list[i]});"></div>
                     </td>
                     <td>
-                        <p>2 hours ago</p>
-                        <p>150 views</p>
+                        <p>${post_age[i]}</p>
+                        <p>${views[i]}</p>
                     </td>
                 </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>1 day ago</p>
-                        <p>320 views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>3 days ago</p>
-                        <p>450 views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>1 week ago</p>
-                        <p>120 views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>1 week ago</p>
-                        <p>22K views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>2 weeks ago</p>
-                        <p>28K views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>2 weeks ago</p>
-                        <p>14K views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>1 month ago</p>
-                        <p>48K views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>2 months ago</p>
-                        <p>55.2K views</p>
-                    </td>
-                </tr>
-                <tr class="post">
-                    <td class="post-thumbnail">
-                        <div class="post-thumbnail"></div>
-                    </td>
-                    <td>
-                        <p>3 months ago</p>
-                        <p>35K views</p>
-                    </td>
-                </tr>
+                % endfor
             </tbody>
         </table>
     </div>
-    
 </body>
 </html>

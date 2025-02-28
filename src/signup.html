@@ -17,7 +17,7 @@
             display: flex;
             flex-direction: column;
             width: 30%;
-            height: 50%;
+            height: 70%;
             background-color: white;
             border: 1px solid black;
             padding: 20px;
@@ -33,6 +33,7 @@
             width: 95%;
             border: 1px solid black;
             font-size: 16px;
+            margin-bottom: 25px;
         }
 
         .button {
@@ -47,30 +48,48 @@
             margin-top: auto;
         }
 
+        .error {
+            color: red;
+            font-size: 14px;
+            position: absolute;
+            transform: translate(0px, -25px);
+        }
+
     </style>
 </head>
 <body>
     <div class="pop-up">
         <div class="input">
             <label>Email:</label>
-            <input placeholder="Enter your email">
+            <input id="email" placeholder="Enter your email">
+            <div id="email-error" class="error"></div>
         </div>
         <div class="input">
             <label>Full name:</label>
-            <input placeholder="Enter your first and last name">
+            <input id="name" placeholder="Enter your first and last name">
+            <div>
+                <div id="name-error" class="error"></div>
+            </div>
         </div>
         <div class="input">
             <label>Password:</label>
-            <input type="password" placeholder="Enter your password">
+            <input id="password" type="password" placeholder="Enter your password">
+            <div>
+                <div id="password-error" class="error"></div>
+            </div>
         </div>
         <div class="input">
             <label>Date of Birth:</label>
-            <input type="date" placeholder="Enter your DOB">
+            <input id="dob" type="date" placeholder="Enter your DOB">
+            <div>
+                <div id="dob-error" class="error"></div>
+            </div>
         </div>
         <div class="button">
-            <a href="index">Sign Up</a>
+            <button onclick="check_data()">Sign Up</button>
         </div>
     </div>
     
 </body>
+<script src="/html/signup.js"></script>
 </html>
