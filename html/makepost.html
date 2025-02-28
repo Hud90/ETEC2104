@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<HTML>
+<head><title>Update Info</title>
+<style>
+.fieldname {
+    display: inline-block;
+    width: 10em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+.filepicker {
+    border: 4px outset #eeeeee;
+    background: #dddddd;
+    margin-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+</style></head>
+<body>
+    <div>
+        <span class='fieldname'>Post Name:</span>
+        <input id="name" size="20">
+    </div><div>
+        <span class="fieldname">Post Picture:</span>
+        <input id="pic" type="file" style="display:none" onchange="updatethumb()">
+        <label for="pic" class="filepicker">Click to Pick</label>
+        <img id="thumbnail" width="64" height="64:">
+    </div>
+    <button onclick="submit()">Post my post!</button>
+    <script src="/html/makepost.js"></script>
+</body></html>

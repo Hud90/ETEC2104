@@ -6,8 +6,7 @@ import data
 #location of this file
 srcdir = os.path.dirname(__file__)
 
-def get():
-    name = random.choice(data.names)
+def get(title, image_src):
     T = mako.template.Template(filename=f"{srcdir}/index.html")
-    return T.render(NAME=name)
+    return T.render(title=title, image_src=image_src)
     
